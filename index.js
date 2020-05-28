@@ -42,7 +42,18 @@ console.log(monthlyRate);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-
+function mortgageCalculator(){
+    let principal=200000;
+    let interestRate=0.05;
+    let years=30;
+    let name='Sarah';
+    let monthlyInterestRate=interestRate/12;
+    let periods=years*12;
+    let numerator= monthlyInterestRate*Math.pow(1+monthlyInterestRate,periods);
+    let denominator= Math.pow(1+monthlyInterestRate,periods)-1;
+    let monthlyRate= principal*numerator/denominator;
+    console.log(name,"your monthly rate is $", monthlyRate);
+}
 
 
 
@@ -52,7 +63,17 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
+function mortgageCalculator(P,I,N){
+    let principal= P;
+    let interestRate= I;
+    let years= N;
+    let monthlyInterestRate=interestRate/12;
+    let periods=years*12;
+    let numerator= monthlyInterestRate*Math.pow(1+monthlyInterestRate,periods);
+    let denominator= Math.pow(1+monthlyInterestRate,periods)-1;
+    let monthlyRate= principal*numerator/denominator;
+    console.log(monthlyRate);
+}
 
 
 
@@ -60,6 +81,19 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).
 Then, add control flow within your function such that IF creditScore is above 740, interest rate drops by 0.5%, if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
 */
+
+function mortgageCalculator(C,P,I,N){
+    let creditScore= C;
+    let principal= P;
+    let interestRate= I;
+    let years= N;
+    let monthlyInterestRate=interestRate/12;
+    let periods=years*12;
+    let numerator= monthlyInterestRate*Math.pow(1+monthlyInterestRate,periods);
+    let denominator= Math.pow(1+monthlyInterestRate,periods)-1;
+    let monthlyRate= principal*numerator/denominator;
+    console.log(monthlyRate);
+}
 
 
 
